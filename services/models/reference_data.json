@@ -1,0 +1,6 @@
+{
+  "source": "Lab2 cleaned dataset, all rows; descriptive reference, not held-out accuracy",
+  "rows": 286,
+  "present_price_mean": 7.640034965034966,
+  "clean_data_sha256": "16689f189ad3a8a78a3127bf0e967da6bed7dccca372d8830db2fe1ac27e08c8"
+}

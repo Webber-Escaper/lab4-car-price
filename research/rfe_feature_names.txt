@@ -1,0 +1,8 @@
+num__Year
+num__Present_Price
+cat__Car_Name
+poly__Present_Price
+poly__Car_Age
+poly__Present_Price^2
+poly__Driven_kms Car_Age
+poly__Car_Age^2

@@ -1,0 +1,21 @@
+num__Year
+num__Present_Price
+num__Driven_kms
+num__Owner
+num__Car_Age
+cat__Car_Name
+cat__Fuel_Type
+cat__Selling_type
+cat__Transmission
+poly__Present_Price
+poly__Driven_kms
+poly__Car_Age
+poly__Present_Price^2
+poly__Present_Price Driven_kms
+poly__Present_Price Car_Age
+poly__Driven_kms^2
+poly__Driven_kms Car_Age
+poly__Car_Age^2
+bins__Present_Price
+bins__Driven_kms
+bins__Car_Age

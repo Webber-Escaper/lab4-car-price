@@ -1,0 +1,25 @@
+{
+  "model_type": "Pipeline",
+  "estimator_type": "RandomForestRegressor",
+  "source": "Actual Lab2 MLflow Production alias, exported without retraining",
+  "model_name": "car_price_prediction_model",
+  "registry_version": "8",
+  "run_id": "d08993c2115c4f13a49341e1720e0351",
+  "model_uri": "runs:/d08993c2115c4f13a49341e1720e0351/model",
+  "rows": 286,
+  "reference_year": 2018,
+  "features": [
+    "Car_Name",
+    "Year",
+    "Present_Price",
+    "Driven_kms",
+    "Fuel_Type",
+    "Selling_type",
+    "Transmission",
+    "Owner",
+    "Car_Age"
+  ],
+  "scikit_learn_version": "1.5.2",
+  "model_sha256": "08dad9ea8e8bed24e4279c3f95d6a3195dc29844cf245e5fd39f732c8aec8263",
+  "package_fallback_used": false
+}

@@ -1,0 +1,57 @@
+name: lab4_car_price
+
+services:
+  ml_service:
+    build: ./ml_service
+    image: car_price_prediction:3
+
+    ports:
+      - "127.0.0.1:8004:8000"
+    volumes:
+      - ./models:/models:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+  requests:
+    build: ./requests
+    image: car_price_requests:2
+
+    environment:
+      ML_SERVICE_URL: http://ml_service:8000/api/prediction
+    depends_on:
+      ml_service:
+        condition: service_healthy
+
+  prometheus:
+    image: prom/prometheus:latest
+
+    ports:
+      - "127.0.0.1:9094:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    depends_on:
+      ml_service:
+        condition: service_healthy
+
+  grafana:
+    image: grafana/grafana:latest
+
+    ports:
+      - "127.0.0.1:3004:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+    depends_on:
+      - prometheus
+
+volumes:
+  prometheus_data:
+  grafana_data:

@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv*/
+.ipynb_checkpoints/
+*.csv
+*.pkl
+!services/models/model.pkl
+.env
+.env.*
+!.env.example
+mlruns/
+mlartifacts/
+*.db
+*.db-shm
+*.db-wal
+*.log

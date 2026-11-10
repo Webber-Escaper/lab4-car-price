@@ -1,0 +1,16 @@
+{
+  "data_matches_latest_lab1": true,
+  "rows": 286,
+  "finished_runs": 7,
+  "registered_versions": 4,
+  "production_version": "4",
+  "production_run_id": "267d6c82ea5a442e851f521146fb51c2",
+  "fresh_process_predictions": [
+    3.749000000000009,
+    5.095799999999999,
+    7.78575,
+    2.7477500000000066,
+    4.58600000000001
+  ],
+  "artifact_location": "mlflow-artifacts:/1"
+}

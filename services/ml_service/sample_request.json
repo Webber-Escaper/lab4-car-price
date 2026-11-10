@@ -1,0 +1,11 @@
+{
+  "item_id": 123,
+  "Car_Name": "ritz",
+  "Year": 2014,
+  "Present_Price": 5.59,
+  "Driven_kms": 27000,
+  "Fuel_Type": "Petrol",
+  "Selling_type": "Dealer",
+  "Transmission": "Manual",
+  "Owner": 0
+}
